@@ -395,6 +395,17 @@ impl State {
                 repaint: false, // moving a window doesn't warrant a repaint
                 consumed: false,
             },
+            WindowEvent::TouchpadMagnify {
+                device_id,
+                delta,
+                phase,
+            } => {}
+            WindowEvent::SmartMagnify { device_id } => {}
+            WindowEvent::TouchpadRotate {
+                device_id,
+                delta,
+                phase,
+            } => {}
         }
     }
 
